@@ -1,0 +1,10 @@
+ $("#tempf").on("click", function() {
+            $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&units=metric&APPID="+apiKey, function(response) {
+            var tempc = Math.round(response.main.temp)
+            var city = response.name;
+            var weather = response.weather[0].description;
+            var image = "<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png'>";
+          $("#info").html(city+"<br><br>"+tempc+"C"+"<br><br>"+weather+image);
+          $("#weather").html("Fahrenheit")
+            })
+     })
