@@ -1,5 +1,9 @@
 body {
   font-family: 'Roboto';
+  background-size: cover;
+  background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
 }
 h1 {
   font-weight: 300;
@@ -15,7 +19,6 @@ h1 {
   min-width: 30vh;
   border-radius: 10px;
   color: black;
-  background: rgba(255, 255, 255, .08);
 }
 .large {
   margin: 15px;
@@ -28,4 +31,3 @@ h1 {
   font-weight: 300;
   font-size: 65px;
 }
-
