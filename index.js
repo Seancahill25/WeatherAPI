@@ -76,6 +76,8 @@ function convertTemp() {
   var tempc;
   if (tempChange == "C") {
     document.getElementById('tempChange').innerHTML = "F";
+    document.getElementById('tempChange2').innerHTML = "F";
+    document.getElementById('tempChange3').innerHTML = "F";
     tempf = Math.round(temp * 1.8 + 32);
     ltempf = Math.round(lowtemp * 1.8 + 32);
     htempf = Math.round(hightemp * 1.8 + 32);
@@ -84,6 +86,8 @@ function convertTemp() {
     document.getElementById('hightemp').innerHTML = htempf.toFixed(0);
   } else {
     document.getElementById('tempChange').innerHTML = "C";
+    document.getElementById('tempChange2').innerHTML = "C";
+    document.getElementById('tempChange3').innerHTML = "C";
     tempc = Math.round(temp - 32) / 1.8;
     ltempc = Math.round(lowtemp - 32) / 1.8;
     htempc = Math.round(hightemp - 32) / 1.8;
