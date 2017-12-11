@@ -10,7 +10,7 @@ h1 {
 }
 .temp{
   cursor:pointer;
-  color:#006dcc;
+  color: red;
 }
 .container-fluid {
   padding: 15px 30px 30px 30px;
@@ -19,6 +19,7 @@ h1 {
   min-width: 30vh;
   border-radius: 10px;
   color: black;
+  background-color: rgba(192,192,192,.3);
 }
 .large {
   margin: 15px;

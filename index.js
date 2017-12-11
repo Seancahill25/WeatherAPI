@@ -42,8 +42,8 @@ $(document).ready(function() {
           skycons.play();
           if (bg == "Clear") {
             skycons.add("icon", "clear-day")
-            bgImage = "images/clear sky.jpg"
-          } else if (bg == "Snow") {
+            bgImage = "images/clear.jpg"
+          } else if (bg =="Snow") {
             skycons.add("icon", "snow")
             bgImage = "images/snow.jpg"
           } else if (bg == "Rain") {
@@ -52,7 +52,7 @@ $(document).ready(function() {
           } else if (bg == "Clouds") {
             skycons.add("icon", "cloudy") 
             bgImage = "images/clouds.jpg"
-          } else if (bg == "Thunderstorm") {
+          } else if (bg=="Thunderstorm") {
             skycons.add("icon", "fog")
             bgImage = "images/lighting.jpg"
           }
