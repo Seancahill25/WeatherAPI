@@ -1,6 +1,12 @@
 /*global $ apiKey navigator config Skycons*/
 var apiKey = config.apiKey;
 var bgImage = "https://codetojoy.000webhostapp.com/assets/clouds.jpg";
+var icons = new Skycons(),
+          list  = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ];
 $(document).ready(function() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -32,24 +38,23 @@ $(document).ready(function() {
           $('#description').text(data.weather[0].main);
           $('#city').text(data.name);
           $('#wind').text(wind + "mph");
-          skycons.add("icon", icon);
           skycons.add()
           skycons.play();
-          if ( document.getElementById("icon") == "mist") {
-            skycons.add("icon", skycons.FOG)
-          }
-          if (bg == "clear sky") {
+          if (bg == "Clear") {
+            skycons.add("icon", "clear-day")
             bgImage = "images/clear sky.jpg"
-          } else if ("snow") {
+          } else if (bg == "Snow") {
+            skycons.add("icon", "snow")
             bgImage = "images/snow.jpg"
-          } else if ("rain") {
+          } else if (bg == "Rain") {
+            skycons.add("icon", "rain")
             bgImage = "images/rain.jpg "
-          } else if ("cloud") {
+          } else if (bg == "Clouds") {
+            skycons.add("icon", "cloudy") 
             bgImage = "images/clouds.jpg"
-          } else if ("thunderstorm") {
+          } else if (bg == "Thunderstorm") {
+            skycons.add("icon", "fog")
             bgImage = "images/lighting.jpg"
-          } else {
-            bgImage = " "
           }
           document.getElementById("main").style.backgroundImage = "url(" + bgImage + ")";
         }
