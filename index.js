@@ -46,7 +46,7 @@ $(document).ready(function() {
           } else if (bg =="Snow") {
             skycons.add("icon", "snow")
             bgImage = "images/snow.jpg"
-          } else if (bg == "Rain") {
+          } else if (bg =="Rain") {
             skycons.add("icon", "rain")
             bgImage = "images/rain.jpg "
           } else if (bg == "Clouds") {
